@@ -29,9 +29,9 @@ public class Book {
 		}
 	}
 	public void getBookInfo() {
-		System.out.println("도서명 : ");
-		System.out.println("저자 : ");
-		System.out.println("ISBN : ");
+		System.out.println("도서명 : "+title);
+		System.out.println("저자 : "+author);
+		System.out.println("ISBN : "+isbn);
 		
 		if(isborrowd) {
 			System.out.println("대출여부 : 불가능");

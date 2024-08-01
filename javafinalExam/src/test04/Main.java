@@ -17,22 +17,27 @@ public class Main {
 		System.out.println("----------------------");
 		
 		//도서 대출
+		member.borrowBook(book);
 		System.out.println("----------------------");
 		
 		//도서 정보 출력
+		book.getBookInfo();
 		System.out.println("----------------------");
 		
 		//회원 정보 출력
+		member.getMemberInfo();
 		System.out.println("----------------------");
 		
 		//도서 대출
+		member.borrowBook(book);
 		System.out.println("----------------------");
 		
 		//도서 반납
+		member.returnBook(book);
 		System.out.println("----------------------");
 		
 		//회원 정보 출력
-
+		member.getMemberInfo();
 		System.out.println("----------------------");
 		
 	}
