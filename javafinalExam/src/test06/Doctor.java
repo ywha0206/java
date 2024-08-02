@@ -21,7 +21,14 @@ public class Doctor {
 
 	@Override
 	public String toString() {
-		return "의사 : " + name + "(ID: " + id + ", 전문분야: " + special + "\n담당환자목록:\n" + patients;
+		StringBuilder builder = new StringBuilder();
+		builder.append("의사: ").append(name).append("(ID: ").append(id).append(", 전문분야: ").append(special).append(")\n");
+		builder.append("담당환자목록:\n");
+		for(Patient patient: patients) {
+			builder.append(patient.toString()).append("\n");
+		}
+		return builder.toString();
+		//return "의사 : " + name + "(ID: " + id + ", 전문분야: " + special + "\n담당환자목록:\n" + patients;
 	}
 	
 	
