@@ -126,9 +126,17 @@ public class User2DAO {
 		
 	}
 	public void deleteUser() {
-
+		String sql = "delete from `user2` where `uid`=?";
+		int result = 0;
+		
 		try {
 			Connection conn = DriverManager.getConnection(HOST, USER, PASS);
+			PreparedStatement psmt = conn.prepareStatement(sql);
+			
+			User2VO vo = new User2VO();
+			psmt.setString(1, vo.getUid());
+			
+			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
